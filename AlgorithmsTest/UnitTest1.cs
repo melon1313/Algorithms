@@ -52,5 +52,29 @@ namespace AlgorithmsTest_
             //Assert
             Assert.AreEqual(expected, testData);
         }
+
+        [TestCase(new int[] { 8, 2, 6, 10, 4 }, new int[] { 10, 8, 6, 4, 2 })]
+        public void SelectionSortByLoop_WhenCalled_SortedFromLargeToSmall(int[] testData, int[] expected)
+        {
+            //Arrange
+
+            //Act
+            SelectionSort.SelectionSortByLoop(testData);
+
+            //Assert
+            Assert.AreEqual(expected, testData);
+        }
+
+        [TestCase(new int[] { 8, 2, 6, 10, 4 }, new int[] { 10, 8, 6, 4, 2 })]
+        public void SelectionSortByRecursion_WhenCalled_SortedFromLargeToSmall(int[] testData, int[] expected)
+        {
+            //Arrange
+
+            //Act
+            SelectionSort.SelectionSortByRecursion(testData);
+
+            //Assert
+            Assert.AreEqual(expected, testData);
+        }
     }
 }
